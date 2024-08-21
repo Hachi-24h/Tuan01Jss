@@ -214,3 +214,36 @@ for (let i = 0; i < billss.length; i++) {
 console.log('Bills: ', billss);
 console.log('Tips: ', tipss);
 console.log('Totals: ', totalss);
+
+// Phần 2 - bài 3
+
+console.log('\n--------------------Phần 2 - bài 3---------------------');
+
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 78, // kg
+    height: 1.69 // meters
+};
+
+const john = {
+    fullName: 'John Smith',
+    mass: 92, // kg
+    height: 1.95 // meters
+};
+
+
+function calcBMI(person) {
+    return person.mass / (person.height ** 2);
+}
+
+
+mark.bmi = calcBMI(mark);
+john.bmi = calcBMI(john);
+
+if (mark.bmi > john.bmi) {
+    console.log(`Chỉ số BMI của ${mark.fullName} (${mark.bmi.toFixed(1)}) cao hơn của ${john.fullName} (${john.bmi.toFixed(1)})!`);
+} else if (john.bmi > mark.bmi) {
+    console.log(`Chỉ số BMI của ${john.fullName} (${john.bmi.toFixed(1)}) cao hơn của ${mark.fullName} (${mark.bmi.toFixed(1)})!`);
+} else {
+    console.log(`Chỉ số BMI của ${mark.fullName} và ${john.fullName} bằng nhau (${mark.bmi.toFixed(1)})!`);
+}
