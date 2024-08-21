@@ -150,3 +150,42 @@ const averageTotal = calcAverage(totals);
 
 console.log('Average Tip: ', averageTip);
 console.log('Average Total: ', averageTotal);
+
+// Phần 2 - bài 1 
+console.log('\n--------------------Phần 2 - bài 1---------------------');
+// Dữ liệu thử nghiệm
+const dolphinsData1 = [44, 23, 71];
+const koalasData1 = [65, 54, 49];
+
+const dolphinsData2 = [85, 54, 41];
+const koalasData2 = [23, 34, 27];
+
+// Hàm tính trung bình cộng
+function calcAverage(arr) {
+    return arr.reduce((sum, score) => sum + score, 0) / arr.length;
+}
+
+// Hàm xác định đội chiến thắng
+function checkWinner(avgDolphins, avgKoalas) {
+    if (avgDolphins >= 2 * avgKoalas) {
+        console.log(`Dolphins thắng (${avgDolphins} vs. ${avgKoalas})`);
+    } else if (avgKoalas >= 2 * avgDolphins) {
+        console.log(`Koalas thắng (${avgKoalas} vs. ${avgDolphins})`);
+    } else {
+        console.log('Không có đội nào thắng!');
+    }
+}
+
+// Tính trung bình cho cả hai đội trong dữ liệu 1
+const avgDolphins1 = calcAverage(dolphinsData1);
+const avgKoalas1 = calcAverage(koalasData1);
+
+// Xác định đội chiến thắng cho dữ liệu 1
+checkWinner(avgDolphins1, avgKoalas1);
+
+// Tính trung bình cho cả hai đội trong dữ liệu 2
+const avgDolphins2 = calcAverage(dolphinsData2);
+const avgKoalas2 = calcAverage(koalasData2);
+
+// Xác định đội chiến thắng cho dữ liệu 2
+checkWinner(avgDolphins2, avgKoalas2);
