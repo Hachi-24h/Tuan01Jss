@@ -247,3 +247,39 @@ if (mark.bmi > john.bmi) {
 } else {
     console.log(`Chỉ số BMI của ${mark.fullName} và ${john.fullName} bằng nhau (${mark.bmi.toFixed(1)})!`);
 }
+
+// Phần 2 - bài 4
+console.log('\n--------------------Phần 2 - bài 4---------------------');
+function calcTip(bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
+}
+const listBill = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const listTip = [];
+const listTotal = [];
+
+for (let i = 0; i < listBill.length; i++) {
+    const tip = calcTip(listBill[i]);
+    listTip.push(tip);
+    listTotal.push(listBill[i] + tip);
+}
+
+console.log('List Bills: ', listBill);
+console.log('List Tips: ', listTip);
+console.log('List Totals: ', listTotal);
+
+
+// Phần thưởng: Hàm tính giá trị trung bình
+function calcAverage(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum / arr.length;
+}
+
+// Tính trung bình của các mảng
+const tbTip = calcAverage(tips);
+const tbTotal = calcAverage(totals);
+
+console.log('Average Tip: ', tbTip);
+console.log('Average Total: ', tbTotal);
