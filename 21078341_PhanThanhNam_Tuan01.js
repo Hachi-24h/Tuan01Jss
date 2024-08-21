@@ -189,3 +189,28 @@ const avgKoalas2 = calcAverage(koalasData2);
 
 // Xác định đội chiến thắng cho dữ liệu 2
 checkWinner(avgDolphins2, avgKoalas2);
+
+// Phần 2 - bài 2
+console.log('\n--------------------Phần 2 - bài 2---------------------');
+// Dữ liệu thử nghiệm
+const billss = [125, 555, 44];
+
+// Hàm tính tiền boa
+function calcTip(bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
+}
+
+// Mảng chứa tiền boa và tổng số tiền
+const tipss = [];
+const totalss = [];
+
+// Vòng lặp tính toán tiền boa và tổng số tiền
+for (let i = 0; i < billss.length; i++) {
+    const tip = calcTip(billss[i]);
+    tipss.push(tip);
+    totalss.push(billss[i] + tip);
+}
+
+console.log('Bills: ', billss);
+console.log('Tips: ', tipss);
+console.log('Totals: ', totalss);
